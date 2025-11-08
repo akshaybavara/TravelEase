@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TravelEase — Discover & Book</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-slate-50 text-slate-900">
+  <header class="bg-white shadow sticky top-0 z-30">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <img src="assets/logo.svg" alt="TravelEase" class="h-10 w-10"/>
+        <span class="font-semibold text-lg">TravelEase</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="index.html" class="hover:text-sky-600">Home</a>
+        <a href="packages.html" class="hover:text-sky-600">Packages</a>
+        <a href="dashboard.html" class="hover:text-sky-600">Dashboard</a>
+        <a href="admin.html" class="hover:text-sky-600">Admin</a>
+        <button id="themeToggle" class="px-3 py-1 rounded border">Dark</button>
+      </nav>
+      <div class="md:hidden">
+        <button id="mobileMenuBtn" class="p-2 rounded bg-slate-100">Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-10">
+    <section class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="text-4xl font-bold leading-tight">Plan. Book. Explore — <span class="text-sky-600">TravelEase</span></h1>
+        <p class="mt-4 text-slate-700">Discover curated travel packages, instant bookings, and local experiences — all from one modern dashboard.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="packages.html" class="px-5 py-3 rounded-lg bg-sky-600 text-white shadow hover:opacity-95">Explore Packages</a>
+          <a href="#features" class="px-5 py-3 rounded-lg border">Learn More</a>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow">
+        <form class="space-y-4">
+          <div>
+            <label class="text-sm">Destination</label>
+            <input class="w-full mt-1 p-3 rounded border" placeholder="Eg: Goa, Paris, Ladakh" />
+          </div>
+          <div class="flex gap-3">
+            <input type="date" class="w-1/2 p-3 rounded border" />
+            <input type="date" class="w-1/2 p-3 rounded border" />
+          </div>
+          <div class="flex gap-3">
+            <select class="w-1/2 p-3 rounded border">
+              <option>2 persons</option>
+              <option>4 persons</option>
+            </select>
+            <select class="w-1/2 p-3 rounded border">
+              <option>Economy</option>
+              <option>Luxury</option>
+            </select>
+          </div>
+          <div class="flex gap-3">
+            <button class="flex-1 px-4 py-3 bg-sky-600 text-white rounded-lg">Search</button>
+            <button class="flex-1 px-4 py-3 border rounded-lg">Clear</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="features" class="mt-12 grid md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-2xl shadow">
+        <h3 class="font-semibold">Curated Packages</h3>
+        <p class="mt-2 text-sm text-slate-600">Hand-picked itineraries and verified partners.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow">
+        <h3 class="font-semibold">Secure Payments</h3>
+        <p class="mt-2 text-sm text-slate-600">Stripe/Razorpay ready payment UI placeholders.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow">
+        <h3 class="font-semibold">24/7 Support</h3>
+        <p class="mt-2 text-sm text-slate-600">Chat toggle with AI assistant mock included.</p>
+      </div>
+    </section>
+
+    <section class="mt-12">
+      <h2 class="text-2xl font-semibold">Top Destinations</h2>
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Example card -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop" class="w-full h-40 object-cover"/>
+          <div class="p-4">
+            <h3 class="font-semibold">Goa Beaches</h3>
+            <p class="text-sm text-slate-600 mt-1">5 nights • Starts ₹8,999</p>
+            <div class="mt-4 flex justify-between items-center">
+              <a href="package-details.html" class="text-sky-600 text-sm">View</a>
+              <button class="px-3 py-1 rounded border text-sm">Book</button>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat cards omitted for brevity -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white mt-12 border-t">
+    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-start gap-6">
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="assets/logo.svg" class="h-8 w-8"/>
+          <div>
+            <p class="font-semibold">TravelEase</p>
+            <p class="text-sm text-slate-600">Book memorable trips with confidence.</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-sm text-slate-600">
+        <p>© TravelEase — 2025</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chat toggle (fixed bottom-right above footer) -->
+  <div id="chatToggle" class="fixed right-6 bottom-20 z-50">
+    <button id="openChat" aria-label="Open chat" class="bg-sky-600 text-white p-4 rounded-full shadow-lg">
+      💬
+    </button>
+  </div>
+
+  <!-- Chat window -->
+  <div id="chatWindow" class="fixed right-6 bottom-36 z-50 hidden w-80 md:w-96">
+    <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col h-96">
+      <div class="px-4 py-3 flex items-center justify-between border-b">
+        <div class="flex items-center gap-3">
+          <div class="h-9 w-9 rounded-full bg-sky-100 flex items-center justify-center">AI</div>
+          <div>
+            <div class="font-semibold">Travel Assistant</div>
+            <div class="text-xs text-slate-500">Online</div>
+          </div>
+        </div>
+        <div>
+          <button id="closeChat" class="p-1 rounded hover:bg-slate-100">✕</button>
+        </div>
+      </div>
+      <div id="chatBody" class="p-4 overflow-auto flex-1 text-sm space-y-3">
+        <div class="text-slate-600">Hi 👋 I'm TravelEase assistant. How can I help you today?</div>
+      </div>
+      <div class="p-3 border-t">
+        <form id="chatForm" class="flex gap-2">
+          <input id="chatInput" class="flex-1 p-2 rounded border" placeholder="Ask about packages, bookings..." />
+          <button class="px-3 py-2 rounded bg-sky-600 text-white">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

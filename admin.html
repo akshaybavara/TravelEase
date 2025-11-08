@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin — TravelEase</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-slate-50 text-slate-900">
+  <header class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <img src="assets/logo.svg" alt="TravelEase" class="h-8 w-8"/>
+        <span class="font-semibold">Admin</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-10">
+    <h1 class="text-2xl font-semibold">Admin Dashboard</h1>
+    <div class="mt-6 grid md:grid-cols-2 gap-6">
+      <div class="bg-white p-6 rounded-2xl shadow">
+        <h3 class="font-semibold">Packages</h3>
+        <p class="text-sm text-slate-600 mt-2">Create / Edit / Delete packages (UI placeholders).</p>
+        <button class="mt-4 px-3 py-2 rounded bg-sky-600 text-white">Add Package</button>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow">
+        <h3 class="font-semibold">Bookings</h3>
+        <p class="text-sm text-slate-600 mt-2">Recent bookings list (UI)</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
