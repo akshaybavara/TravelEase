@@ -8,6 +8,22 @@ document.addEventListener('DOMContentLoaded', function(){
   const chatInput = document.getElementById('chatInput');
   const chatBody = document.getElementById('chatBody');
   const themeToggle = document.getElementById('themeToggle');
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileNav = document.getElementById('mobileNav');
+  const logoClick = document.getElementById('logoClick');
+  mobileMenuBtn.textContent = mobileNav.classList.contains('hidden') ? '☰' : '✖️';
+
+if (logoClick) {
+  logoClick.addEventListener('click', () => {
+    window.location.href = 'index.html';
+  });
+}
+
+if (mobileMenuBtn && mobileNav) {
+  mobileMenuBtn.addEventListener('click', () => {
+    mobileNav.classList.toggle('hidden');
+  });
+}
 
   if(openChat && chatWindow){
     openChat.addEventListener('click', ()=> chatWindow.classList.remove('hidden'));
