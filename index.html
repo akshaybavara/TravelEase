@@ -16,13 +16,13 @@
 <header class="bg-white dark:bg-slate-800 shadow sticky top-0 z-30 transition-colors duration-500">
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
     <!-- Logo -->
-    <div class="flex items-center gap-3 cursor-pointer" id="logoClick">
-      <img src="assets/logo.svg" alt="TravelEase" class="h-10 w-10"/>
+    <div id="logoClick" class="flex items-center gap-2 cursor-pointer">
+      <img src="assets/logo.svg" alt="TravelEase" class="h-10 w-10">
       <span class="font-semibold text-lg">TravelEase</span>
     </div>
 
     <!-- Desktop Nav -->
-    <nav class="hidden md:flex items-center gap-6 text-sm" id="desktopNav">
+    <nav class="hidden md:flex items-center gap-6 text-sm">
       <a href="index.html" class="hover:text-sky-600">Home</a>
       <a href="packages.html" class="hover:text-sky-600">Packages</a>
       <a href="dashboard.html" class="hover:text-sky-600">Dashboard</a>
@@ -30,14 +30,14 @@
       <button id="themeToggle" class="px-3 py-1 rounded border">Dark</button>
     </nav>
 
-    <!-- Mobile Menu Button -->
-    <div class="md:hidden">
-      <button id="mobileMenuBtn" class="p-2 rounded bg-slate-100 dark:bg-slate-700">☰</button>
-    </div>
+    <!-- Mobile Button -->
+    <button id="mobileMenuBtn" class="md:hidden p-2 rounded bg-slate-100 dark:bg-slate-700">
+      ☰
+    </button>
   </div>
 
-  <!-- Mobile Nav Menu (hidden by default) -->
-   <nav id="mobileNav" class="hidden md:hidden bg-white dark:bg-slate-800 border-t dark:border-slate-700 transition-all duration-300 ease-in-out">
+  <!-- Mobile Nav -->
+  <nav id="mobileNav" class="hidden bg-white dark:bg-slate-800 border-t dark:border-slate-700 transition-all duration-300">
     <div class="px-6 py-4 flex flex-col space-y-3 text-sm">
       <a href="index.html" class="hover:text-sky-600">Home</a>
       <a href="packages.html" class="hover:text-sky-600">Packages</a>
