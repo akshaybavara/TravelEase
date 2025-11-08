@@ -5,10 +5,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>TravelEase — Discover & Book</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    darkMode: 'class',
+  }
+</script>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-slate-50 text-slate-900">
-  <header class="bg-white shadow sticky top-0 z-30">
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-500">
+  <header class="bg-white dark:bg-slate-800 shadow sticky top-0 z-30 transition-colors duration-500">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <div class="flex items-center gap-4">
         <img src="assets/logo.svg" alt="TravelEase" class="h-10 w-10"/>
@@ -100,8 +105,8 @@
     </section>
   </main>
 
-  <footer class="bg-white mt-12 border-t">
-    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-start gap-6">
+  <footer class="bg-white dark:bg-slate-800 mt-12 border-t border-slate-200 dark:border-slate-700">
+    <div class="bg-white dark:bg-slate-800 rounded-2xl shadow p-6 transition-colors duration-500">
       <div>
         <div class="flex items-center gap-3">
           <img src="assets/logo.svg" class="h-8 w-8"/>
